@@ -4,7 +4,7 @@ A cocktail of some useful Wine patches. 🍹
 ## Features
 
 - **Game-specific fixes**  
-  - *Genshin Impact*: Fixes launch issues when network is enabled and resolves game hanging on exit.
+  - *A Certain Anime Game*: Fixes launch issues when network is enabled and resolves game hanging on exit.
 
 - **Quality of Life improvements**  
   - Includes a selection of patches from [wine-pure-git](https://aur.archlinux.org/packages/wine-pure-git) for enhanced compatibility and smoother usage.
