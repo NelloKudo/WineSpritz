@@ -1,0 +1,26 @@
+From 318a9e9f481d9ce70fe7cc8a8eaf789374b4132f Mon Sep 17 00:00:00 2001
+From: NelloKudo <marshnelloosu@gmail.com>
+Date: Wed, 23 Apr 2025 17:10:06 +0200
+Subject: [PATCH] debugger: also include unistd.h
+
+Fixes compilation without -Wno-implicit-function-declaration on
+recent gcc versions.
+---
+ server/debugger.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/server/debugger.c b/server/debugger.c
+index 2aaa87ed7..8b29e7019 100644
+--- a/server/debugger.c
++++ b/server/debugger.c
+@@ -25,6 +25,7 @@
+ #include <string.h>
+ #include <stdarg.h>
+ #include <stdio.h>
++#include <unistd.h>
+ 
+ #include "ntstatus.h"
+ #define WIN32_NO_STATUS
+-- 
+2.49.0
+
