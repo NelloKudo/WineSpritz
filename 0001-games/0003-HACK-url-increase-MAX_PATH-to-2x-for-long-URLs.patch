@@ -1,0 +1,42 @@
+From 6eb5985db8f5e3ee9176959b8babc6198a75d615 Mon Sep 17 00:00:00 2001
+From: NelloKudo <marshnelloosu@gmail.com>
+Date: Thu, 29 May 2025 15:14:02 +0200
+Subject: [PATCH] HACK: url: increase MAX_PATH to 2x for long URLs
+
+Fixes Genshin Impact's community tab opening enourmous URLs for whatever reason.
+---
+ dlls/kernelbase/path.c | 2 +-
+ dlls/url/url_main.c    | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/dlls/kernelbase/path.c b/dlls/kernelbase/path.c
+index a737294..44d2202 100644
+--- a/dlls/kernelbase/path.c
++++ b/dlls/kernelbase/path.c
+@@ -2982,7 +2982,7 @@ HRESULT WINAPI UrlUnescapeW(WCHAR *url, WCHAR *unescaped, DWORD *unescaped_len,
+ 
+ HRESULT WINAPI PathCreateFromUrlA(const char *pszUrl, char *pszPath, DWORD *pcchPath, DWORD dwReserved)
+ {
+-    WCHAR bufW[MAX_PATH];
++    WCHAR bufW[2 * MAX_PATH];
+     WCHAR *pathW = bufW;
+     UNICODE_STRING urlW;
+     HRESULT ret;
+diff --git a/dlls/url/url_main.c b/dlls/url/url_main.c
+index f4f70cd..05e7444 100644
+--- a/dlls/url/url_main.c
++++ b/dlls/url/url_main.c
+@@ -74,8 +74,8 @@ BOOL WINAPI InetIsOffline(DWORD flags)
+ 
+ void WINAPI FileProtocolHandlerA(HWND hWnd, HINSTANCE hInst, LPCSTR pszUrl, int nShowCmd)
+ {
+-    CHAR pszPath[MAX_PATH];
+-    DWORD size = MAX_PATH;
++    CHAR pszPath[2 * MAX_PATH];
++    DWORD size = 2 * MAX_PATH;
+     HRESULT createpath = PathCreateFromUrlA(pszUrl,pszPath,&size,0);
+ 
+     TRACE("(%p, %s, %d)\n",hWnd,debugstr_a(pszUrl),nShowCmd);
+-- 
+2.49.0
+
