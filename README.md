@@ -3,18 +3,19 @@ A cocktail of some useful Wine patches. 🍹
 
 ## Features
 
-- **Game-specific fixes**  
-  - *A Certain Anime Game*: Fixes launch issues when network is enabled, resolves game hanging on exit and fixes community tab not launching.
+- **Game-specific fixes**
+  - *Genshin Impact (Global/CN)/Zenless Zone Zero*: Includes workaround to launch the game offline, fixes possible high CPU usages in-game and launch issues.
+  - *Genshin Impact*: Fixes game hanging on exit. 
 
 - **QoL improvements**  
   - Includes some patches from [wine-pure-git](https://aur.archlinux.org/packages/wine-pure-git) for compatibility/usage.
 
 - **Upstream merge requests**  
   - [MR 7064](https://gitlab.winehq.org/wine/wine/-/merge_requests/7064): Fixes issues with many games when using WoW64 Wine.
-  - [MR 7540](https://gitlab.winehq.org/wine/wine/-/merge_requests/7540): Fixes issues with long paths links/files.
+  - [MR 7540](https://gitlab.winehq.org/wine/wine/-/merge_requests/7540): Fixes issues with long paths links/files (e.g. GI's community/feedback tab).
 
 - **NTSync support**
-  - Fixes for NTSync based on [wine-tkg-ntsync](https://github.com/Kron4ek/wine-tkg/tree/ntsync).
+  - Fixes for WineBuilder for NTSync based on [wine-tkg-ntsync](https://github.com/Kron4ek/wine-tkg/tree/ntsync).
 
 - **Rebased on [wine-tkg](https://github.com/Kron4ek/wine-tkg)**  
   For easier compatibility with TkG patches, still mostly working with upstream Wine too of course.
