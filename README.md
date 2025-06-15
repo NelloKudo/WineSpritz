@@ -29,3 +29,7 @@ Weekly builds are available via [WineBuilder GitHub Actions](https://github.com/
 Spritz-Wine is also available in **AAGL** launchers as `Spritz-Wine-TkG`, as a minimal build with only the essential patches needed for game fixes (see the [aagl branch](https://github.com/NelloKudo/WineSpritz/tree/aagl)).
 
 For easier maintenance and compatibility, those are built at [my fork of Kron4ek's Wine-Builds](https://github.com/NelloKudo/Wine-Builds), always via GitHub Actions: you can download it from releases or from workflows.
+
+## Spritz-Proton
+
+A Spritz-Proton-CachyOS version is also available at [NelloKudo/Proton-CachyOS](https://github.com/NelloKudo/proton-cachyos) with just the game patches applied.
