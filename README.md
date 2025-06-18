@@ -32,4 +32,4 @@ For easier maintenance and compatibility, those are built at [my fork of Kron4ek
 
 ## Spritz-Proton
 
-A Spritz-Proton-CachyOS version is also available at [NelloKudo/Proton-CachyOS](https://github.com/NelloKudo/proton-cachyos) with just the game patches applied.
+A Spritz-Proton-CachyOS version is also available at [NelloKudo/Proton-CachyOS](https://github.com/NelloKudo/proton-cachyos) with just game patches and some backports applied (see the [proton branch](https://github.com/NelloKudo/WineSpritz/tree/proton)). 
