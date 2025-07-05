@@ -1,0 +1,26 @@
+From e3fe28805b279dd84e06293588f80fde58d4a778 Mon Sep 17 00:00:00 2001
+From: NelloKudo <marshnelloosu@gmail.com>
+Date: Tue, 1 Jul 2025 23:51:06 +0200
+Subject: [PATCH] HACK: loader: Force WoW64 in wineloader (NTsync edition)
+
+Workaround for AAGL issues under flatpak.
+---
+ dlls/ntdll/unix/loader.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dlls/ntdll/unix/loader.c b/dlls/ntdll/unix/loader.c
+index 4e40e09ecf2..01abc7f07bf 100644
+--- a/dlls/ntdll/unix/loader.c
++++ b/dlls/ntdll/unix/loader.c
+@@ -476,7 +476,7 @@ static void init_paths(void)
+ char *get_alternate_wineloader( WORD machine )
+ {
+     const char *arch;
+-    BOOL force_wow64 = !(arch = getenv( "WINEARCH" )) || !strcmp( arch, "wow64" );
++    BOOL force_wow64 = TRUE;
+     char *ret = NULL;
+ 
+     if (is_win64)
+-- 
+2.50.0
+
