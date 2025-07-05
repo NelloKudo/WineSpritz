@@ -12,17 +12,13 @@ A cocktail of some useful Wine patches. 🍹
 
 - **Upstream merge requests**  
   - [MR 7064](https://gitlab.winehq.org/wine/wine/-/merge_requests/7064): Fixes issues with many games when using WoW64 Wine.
-  - [MR 7540](https://gitlab.winehq.org/wine/wine/-/merge_requests/7540): Fixes issues with long paths links/files (e.g. GI's community/feedback tab).
+  - [MR 8493](https://gitlab.winehq.org/wine/wine/-/merge_requests/8493): Fixes issues with loading cutscenes in some games.
 
 - **NTSync support**
-  - Fixes for WineBuilder for NTSync based on [wine-tkg-ntsync](https://github.com/Kron4ek/wine-tkg/tree/ntsync).
+  - Fixes for NTsync not compiling on certain GCC/NTsync header versions.
 
 - **Rebased on [wine-tkg](https://github.com/Kron4ek/wine-tkg)**  
   For easier compatibility with TkG patches, still mostly working with upstream Wine too of course.
-
-## Builds
-
-Weekly builds are available via [WineBuilder GitHub Actions](https://github.com/NelloKudo/WineBuilder/actions), built using the Proton SDK environment.
 
 ## AAGL Builds
 
